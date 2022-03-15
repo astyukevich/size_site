@@ -1,0 +1,270 @@
+.mobile-menu nav ul {
+  display: flex;
+}
+
+.menu-lg {
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  
+}
+.menu-lg ul {
+  display: flex;
+}
+.menu-lg ul li {
+  margin: 20px 20px;
+}
+.menu-lg ul a {
+  // text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.menu-lg > li > a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  // border: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.overlayMenu ul li a:hover,
+.overlayMenu ul li a:active,
+.overlayMenu ul li a:focus {
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-transform: translateX(-2px);
+  transform: translateX(-2px);
+  
+
+  
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+.overlayMenu ul li a {
+  -webkit-transition: 1.2s;
+  transition: all 1.2s;
+}
+
+@media only screen and (max-width: 991px) {
+  /* Мобильное Меню Сайта */
+  .menu-off {
+    display: none;
+  }
+  .mobile-menu nav ul {
+    display: block;
+  }
+  .navBurger {
+    z-index: 999999;
+    position: fixed;
+    right: 27px;
+    top: 20px;
+    cursor: pointer;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 27px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    
+  }
+ 
+  .navBurger:after {
+    z-index: 99999;
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 5px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -webkit-box-shadow: 0px 0px 0px 3px #313131;
+    -moz-box-shadow: 0px 0px 0px 3px #313131;
+    box-shadow: 0px 0px 0px 3px #313131;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+  }
+  .navBurger:before {
+    z-index: 99999;
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 5px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -webkit-box-shadow: 0px 0px 0px 3px #313131;
+    -moz-box-shadow: 0px 0px 0px 3px #313131;
+    box-shadow: 0px 0px 0px 3px #313131;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .navBurger:after {
+    bottom: -12px;
+    width: 100%;
+  }
+  .navBurger.active {
+    background: transparent;
+    background-clip: content-box;
+   
+  }
+  .navBurger.active:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0;
+    background: #000;
+    width: 0%;
+    -webkit-box-shadow: 0px 0px 0px 0px #313131;
+    -moz-box-shadow: 0px 0px 0px 0px #313131;
+    box-shadow: 0px 0px 0px 0px #313131;
+  }
+  .navBurger.active:after {
+    bottom: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background: #000;
+    width: 110%;
+    height: 7px;
+    -webkit-box-shadow: 0px 0px 0px 0px #313131;
+    -moz-box-shadow: 0px 0px 0px 0px #313131;
+    box-shadow: 0px 0px 0px 0px #313131;
+  }
+
+  .overlay {
+    position: fixed;
+
+    background: rgba(255, 255, 255, 0.95);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 999;
+  }
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .overlay.open li {
+    display: block;
+    -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+    animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+  }
+  .overlay.open li:nth-of-type(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  .overlay.open li:nth-of-type(3) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  .overlay.open li:nth-of-type(4) {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+  .overlay.open li:nth-of-type(5) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  }
+
+  .overlayMenu {
+    position: absolute;
+    text-align: right;
+    right: 10vw;
+    top: 12vw;
+  }
+  .overlayMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+  .overlayMenu ul li {
+    display: block;
+    position: relative;
+    opacity: 0;
+    width: 100%;
+  }
+  .overlayMenu ul li a {
+    display: inline-block;
+    // border: 1px solid rgba(255, 255, 255, 0.09);
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 40px 10px 40px;
+    margin: 5px 0;
+    -webkit-transition: 0.2s;
+    transition: all 0.2s;
+  }
+  .overlayMenu ul li a:hover,
+  .overlayMenu ul li a:active,
+  .overlayMenu ul li a:focus {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+    padding-left: 80px;
+    color: #2afd9a;
+    // outline: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .locked {
+    overflow: hidden;
+  }
+
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 50px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 50px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Конец стилей меню */
+}

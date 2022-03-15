@@ -1,0 +1,127 @@
+.stage {
+}
+.stage__blocks {
+    display: flex;
+    flex-direction: column;
+    
+}
+.stage__block {
+    display: inherit;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.stage__block-gray {
+    flex-direction: row-reverse;
+    background-color: #f4f4f4;
+}
+.stage__videos {
+    display: block;
+    width: 50%;
+       border: 3px solid #000;
+    margin: 40px 0px 40px 0;
+    
+
+
+}
+.stage__video {
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+border: 3px solid #000;
+justify-content: center;
+align-items: center;
+font-size: 48px;
+}
+.stage__video-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+border: 3px solid #000;
+
+font-size: 48px;
+}
+
+.stage__name {
+    display: inherit;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 30px 50px 30px 130px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 50%;
+
+}
+.stage__number {
+    font-size: 14px;
+}
+.stage__title {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: normal;
+    text-transform: uppercase;
+
+
+}
+.stage__subtitle {
+    font-size: 18px;
+    line-height: 1.7rem;
+    }
+
+ .stage__subtitle p {
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+
+.stage__button {
+}
+.button {
+}
+@media only screen and (max-width: 1200px) {
+    .stage__name {
+        padding: 30px 50px 30px 83px;
+    }
+   
+    
+}
+@media only screen and (max-width: 991px) {
+    .stage__videos {
+       
+        width: 100%;
+    }
+    .stage__block {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+    .stage__name {
+        padding: 30px 50px 30px 30px;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+    .stage__subtitle {
+        margin-bottom: 20px;
+    }
+    .stage__videos {
+        margin: 0px 0px 0px 0; 
+    }
+}
+@media only screen and (max-width: 756px) {}
+@media only screen and (max-width: 550px) {
+    .stage__block {
+        flex-wrap: wrap;
+    }
+    .stage__title {
+        font-size: 32px;
+    }
+    .stage__videos {
+        height: 300px;
+    }
+    .stage__name {
+        padding: 30px 10px 30px 20px;
+    }
+}
